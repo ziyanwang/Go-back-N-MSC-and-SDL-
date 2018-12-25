@@ -1,0 +1,130 @@
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy,4)*/
+system go_back_n_sdl;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25))*/
+Signal ToDatalink1(Frame),ToDataLink2(Frame),FromNetwork1(Packet),
+FromNetwork2(Packet),AckToDataLink1(Frame),AckToDataLink2(Frame),
+ToNetwork1(Packet),ToNetwork2(Packet);
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),122(45,40))*/
+newtype Packet struct
+ data charstring;
+ flag integer;
+endnewtype;
+newtype frame struct
+ info Packet;
+ seq Integer;
+ ack integer;
+endnewtype;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),155(32,87))*/
+channel /*#E*/ 
+N1 from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85))*/
+DataLink1 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),156(25,97))*/
+ToNetwork1;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85))*/
+DataLink1 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),157(22,102))*/
+FromNetwork1;
+endchannel N1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),131(96,87))*/
+channel /*#E*/ 
+D from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85))*/
+DataLink1 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85))*/
+DataLink2 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),132(75,102))*/
+ToDataLink2,AckToDataLink2;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85))*/
+DataLink2 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85))*/
+DataLink1 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),133(73,97))*/
+ToDataLink1,AckToDataLink1;
+endchannel D;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),146(160,87))*/
+channel /*#E*/ 
+N2 from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85))*/
+DataLink2 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),147(153,102))*/
+ToNetwork2;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85))*/
+DataLink2 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),148(151,97))*/
+FromNetwork2;
+endchannel N2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85))*/
+block /*#E*/ 
+DataLink1 referenced;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85))*/
+block /*#E*/ 
+DataLink2 referenced;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy,4)*/
+endsystem go_back_n_sdl;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk,4)*/
+block DataLink2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),182(52,52))*/
+signalroute /*#E*/ 
+D2 from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50))*/
+P2 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),183(17,62))*/
+ToDataLink1,
+AckToDataLink1;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50))*/
+P2 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),184(62,62))*/
+ToDataLink2,
+AckToDataLink2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),191(147,52))*/
+signalroute /*#E*/ 
+N21 from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50))*/
+P2 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),192(167,62))*/
+ToNetwork2;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50))*/
+P2 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),193(117,62))*/
+FromNetwork2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50))*/
+process /*#E*/ 
+P2 referenced;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),188(7,57))*/
+connect /*#E*/ 
+D and 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),182(52,52))*/
+D2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),197(177,57))*/
+connect /*#E*/ 
+N2 and 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),191(147,52))*/
+N21;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk,4)*/
+endblock DataLink2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P2.spr,4)*/
+process P2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P2.spr,4)*/
+endprocess P2;

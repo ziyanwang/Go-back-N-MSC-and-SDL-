@@ -1,0 +1,399 @@
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy,4)*/
+system go_back_n_sdl;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25))*/
+Signal ToDatalink1(Frame),ToDataLink2(Frame),FromNetwork1(Packet),
+FromNetwork2(Packet),AckToDataLink1(Frame),AckToDataLink2(Frame),
+ToNetwork1(Packet),ToNetwork2(Packet);
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),122(45,40))*/
+newtype Packet struct
+ data charstring;
+ flag integer;
+endnewtype;
+newtype frame struct
+ info Packet;
+ seq Integer;
+ ack integer;
+endnewtype;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),155(32,87))*/
+channel /*#E*/ 
+N1 from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85))*/
+DataLink1 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),156(25,97))*/
+ToNetwork1;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85))*/
+DataLink1 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),157(22,102))*/
+FromNetwork1;
+endchannel N1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),131(96,87))*/
+channel /*#E*/ 
+D from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85))*/
+DataLink1 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85))*/
+DataLink2 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),132(75,102))*/
+ToDataLink2,AckToDataLink2;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85))*/
+DataLink2 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85))*/
+DataLink1 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),133(73,97))*/
+ToDataLink1,AckToDataLink1;
+endchannel D;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),146(160,87))*/
+channel /*#E*/ 
+N2 from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85))*/
+DataLink2 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),147(153,102))*/
+ToNetwork2;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85))*/
+DataLink2 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),148(151,97))*/
+FromNetwork2;
+endchannel N2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85))*/
+block /*#E*/ 
+DataLink1 referenced;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85))*/
+block /*#E*/ 
+DataLink2 referenced;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy,4)*/
+endsystem go_back_n_sdl;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk,4)*/
+block DataLink1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),122(50,60))*/
+signalroute /*#E*/ 
+N11 from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),119(80,60))*/
+P1 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),123(17,70))*/
+ToNetwork1;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),119(80,60))*/
+P1 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),124(55,70))*/
+FromNetwork1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),131(145,60))*/
+signalroute /*#E*/ 
+D1 from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),119(80,60))*/
+P1 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),132(152,70))*/
+ToDataLink2,
+AckToDataLink2;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),119(80,60))*/
+P1 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),133(112,70))*/
+ToDataLink1,
+AckToDataLink1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),119(80,60))*/
+process /*#E*/ 
+P1 referenced;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),128(7,65))*/
+connect /*#E*/ 
+N1 and 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),122(50,60))*/
+N11;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),137(177,65))*/
+connect /*#E*/ 
+D and 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk(1),131(145,60))*/
+D1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink1.sbk,4)*/
+endblock DataLink1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr,4)*/
+process P1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),119(135,10))*/
+dcl
+next_frame_to_send integer,
+next_frame_expected integer,
+frame_expected integer,
+ack_expected integer,
+f1,f2 Frame,
+bufferNum,i,x integer,
+buffer buffertype;
+timer T1(integer);
+timer T2;
+
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),116(5,25))*/
+newtype bufferType
+array(integer,Packet)
+endnewtype;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),122(70,5))*/
+start /*#E*/ 
+;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),125(60,20))*/
+task /*#E*/ 
+next_frame_to_send:=0,
+next_frame_expected:=0,
+frame_expected:=0,
+ack_expected:=0,
+bufferNum:=0,
+i:=1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),131(65,50))*/
+nextstate /*#E*/ 
+Wait;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),131(65,50))*/
+state /*#E*/ 
+Wait;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),143(5,60))*/
+input /*#E*/ 
+FromNetwork1(buffer(next_frame_to_send));
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),224(5,75))*/
+task /*#E*/ 
+bufferNum:=bufferNum+1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),230(5,90))*/
+task {/*#E*/ 
+f1!info:=buffer(next_frame_to_send);
+f1!seq:=next_frame_to_send;};
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),245(5,105))*/
+decision /*#E*/ 
+frame_expected=0;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),263(27,117))*/
+(true):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),254(15,120))*/
+task /*#E*/ 
+f1!ack:=7;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),266(52,112))*/
+(false):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),260(40,120))*/
+task /*#E*/ 
+f1!ack:=frame_expected-1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),245(5,105))*/
+enddecision;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),269(15,135))*/
+output /*#E*/ 
+ToDataLink2(f1);
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),278(5,150))*/
+task {/*#E*/ 
+next_frame_to_send:=next_frame_to_send+1;
+set(now+100,
+T1(next_frame_to_send));
+reset(T2);};
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),314(15,180))*/
+nextstate /*#E*/ 
+wait;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),353(120,60))*/
+input /*#E*/ 
+T1(x);
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),356(120,75))*/
+task {/*#E*/ 
+next_frame_to_send:=ack_expected;
+i:=1;};
+grst12:
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),362(120,90))*/
+decision /*#E*/ 
+i<=bufferNum;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),377(145,90))*/
+(false):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),374(145,90))*/
+nextstate /*#E*/ 
+wait;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),368(132,102))*/
+(true):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),365(110,105))*/
+task {/*#E*/ 
+f1!info:=buffer(next_frame_to_send);
+f1!seq:=next_frame_to_send;};
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),395(110,120))*/
+decision /*#E*/ 
+frame_expected=0;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),410(122,135))*/
+(true):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),401(115,135))*/
+task /*#E*/ 
+f1!ack:=7;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),407(145,130))*/
+(false):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),404(145,135))*/
+task /*#E*/ 
+f1!ack:=frame_expected-1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),395(110,120))*/
+enddecision;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),413(115,150))*/
+output /*#E*/ 
+ToDataLink2(f1);
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),422(105,165))*/
+task {/*#E*/ 
+set(now+100,
+T1(next_frame_to_send));};
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),548(105,185))*/
+task {/*#E*/ 
+next_frame_to_send:=
+next_frame_to_send+1;};
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),428(115,205))*/
+task /*#E*/ 
+i:=i+1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),362(120,90))*/
+enddecision;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),362(120,90))*/
+join /*#E*/ 
+grst12;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),473(160,60))*/
+input /*#E*/ 
+T2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),479(160,75))*/
+task /*#E*/ 
+f1!seq:=next_frame_to_send;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),488(160,105))*/
+decision /*#E*/ 
+frame_expected=0;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),494(172,117))*/
+(true):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),491(160,120))*/
+task /*#E*/ 
+f1!ack:=7;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),515(182,120))*/
+(false):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),512(160,150))*/
+task /*#E*/ 
+f1!ack:=frame_expected-1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),488(160,105))*/
+enddecision;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),518(160,170))*/
+output /*#E*/ 
+AckToDataLink2(f1);
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),530(155,185))*/
+task {/*#E*/ 
+next_frame_to_send:=
+next_frame_to_send+1;
+reset(T2);};
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),536(160,210))*/
+nextstate /*#E*/ 
+wait;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),281(65,65))*/
+input /*#E*/ 
+ToDataLink1(f2);
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),287(55,80))*/
+decision /*#E*/ 
+f2!seq=frame_expected;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),299(77,90))*/
+(true):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),293(65,95))*/
+output /*#E*/ 
+ToNetwork1(f2!info);
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),449(65,110))*/
+/*#E*/ 
+set(now+100,T2);
+grst13:
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),296(70,130))*/
+task /*#E*/ 
+frame_expected:=
+frame_expected+1;
+grst14:
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),320(65,150))*/
+decision /*#E*/ 
+(f1!ack>=ack_expected)and
+(f1!ack<next_frame_to_send);
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),329(82,162))*/
+(true):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),326(60,165))*/
+task /*#E*/ 
+bufferNum:=bufferNum-1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),332(60,180))*/
+/*#E*/ 
+reset(T1(ack_expected));
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),335(60,195))*/
+task /*#E*/ 
+ack_expected:=ack_expected+1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),545(45,165))*/
+(false):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),542(70,210))*/
+nextstate /*#E*/ 
+wait;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),320(65,150))*/
+enddecision;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),320(65,150))*/
+join /*#E*/ 
+grst14;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),455(55,95))*/
+(false):
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),320(65,150))*/
+join /*#E*/ 
+grst14;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),287(55,80))*/
+enddecision;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),458(95,65))*/
+input /*#E*/ 
+AckToDataLink1(f2);
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),296(70,130))*/
+join /*#E*/ 
+grst13;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr(1),131(65,50))*/
+endstate;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P1.spr,4)*/
+endprocess P1;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk,4)*/
+block DataLink2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),182(52,52))*/
+signalroute /*#E*/ 
+D2 from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50))*/
+P2 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),183(17,62))*/
+ToDataLink1,
+AckToDataLink1;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50))*/
+P2 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),184(62,62))*/
+ToDataLink2,
+AckToDataLink2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),191(147,52))*/
+signalroute /*#E*/ 
+N21 from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50))*/
+P2 to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),192(167,62))*/
+ToNetwork2;
+from 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50))*/
+P2 with 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),193(117,62))*/
+FromNetwork2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50))*/
+process /*#E*/ 
+P2 referenced;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),188(7,57))*/
+connect /*#E*/ 
+D and 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),182(52,52))*/
+D2;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),197(177,57))*/
+connect /*#E*/ 
+N2 and 
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),191(147,52))*/
+N21;
+/*#SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk,4)*/
+endblock DataLink2;

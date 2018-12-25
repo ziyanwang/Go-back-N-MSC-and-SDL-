@@ -1,0 +1,129 @@
+
+
+***********************************************************************
+**  PACKAGE Predefined
+**  #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,20,9)
+***********************************************************************
+2  NEWTYPE Boolean            #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,22,10)
+2  NEWTYPE Character          #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,33,9)
+2  NEWTYPE Charstring         #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,91,9)
+2  NEWTYPE Integer            #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,125,9)
+2  NEWTYPE Real               #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,146,9)
+2  NEWTYPE Pid                #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,214,9)
+2  NEWTYPE Duration           #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,220,9)
+2  NEWTYPE Time               #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,236,9)
+2  NEWTYPE Bit                #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,250,9)
+2  NEWTYPE Bit_string         #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,260,9)
+2  NEWTYPE Octet              #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,281,9)
+2  NEWTYPE Octet_string       #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,312,9)
+2  NEWTYPE NULL               #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,330,9)
+2  NEWTYPE Object_identifier  #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,334,9)
+2  NEWTYPE Any_type           #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,349,9)
+2  SYNTYPE IA5String          #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,106,3)
+2  SYNTYPE NumericString      #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,111,3)
+2  SYNTYPE PrintableString    #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,116,3)
+2  SYNTYPE VisibleString      #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,121,3)
+2  SYNTYPE Natural            #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,144,9)
+2  GENERATOR String           #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,76,11)
+2  GENERATOR Array            #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,164,11)
+2  GENERATOR Powerset         #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,171,11)
+2  GENERATOR Bag              #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,192,11)
+2  GENERATOR Own              #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,352,11)
+2  GENERATOR Oref             #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,362,11)
+2  SYNONYM PLUS_INFINITY      #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,161,9)
+2  SYNONYM MINUS_INFINITY     #SDTREF(TEXT,C:\Telelogic\SDL_TTCN_Suite4.4\sdt\sdtdir\wini386\predef.sdl,162,9)
+
+***********************************************************************
+**  SYSTEM go_back_n_sdl
+**  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy,4,1,8)
+***********************************************************************
+2  SIGNAL ToDatalink1         #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),1,8)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),133(73,97),1,1)
+     SIGNALROUTE              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),183(17,62),1,1)
+2  SIGNAL ToDataLink2         #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),1,27)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),132(75,102),1,1)
+     SIGNALROUTE              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),184(62,62),1,1)
+2  SIGNAL FromNetwork1        #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),1,46)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),157(22,102),1,1)
+2  SIGNAL FromNetwork2        #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),2,1)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),148(151,97),1,1)
+     SIGNALROUTE              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),193(117,62),1,1)
+2  SIGNAL AckToDataLink1      #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),2,22)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),133(73,97),1,13)
+     SIGNALROUTE              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),183(17,62),2,1)
+2  SIGNAL AckToDataLink2      #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),2,44)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),132(75,102),1,13)
+     SIGNALROUTE              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),184(62,62),2,1)
+2  SIGNAL ToNetwork1          #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),3,1)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),156(25,97),1,1)
+2  SIGNAL ToNetwork2          #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),3,20)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),147(153,102),1,1)
+     SIGNALROUTE              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),192(167,62),1,1)
+2  NEWTYPE Packet             #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),122(45,40),1,9)
+     SIGNAL                   #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),1,59)
+     SIGNAL                   #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),2,14)
+     SIGNAL                   #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),3,12)
+     SIGNAL                   #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),3,31)
+     SORT                     #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),122(45,40),6,7)
+3  FIELD data                 #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),122(45,40),2,2)
+3  FIELD flag                 #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),122(45,40),3,2)
+3  OPERATOR =
+3  OPERATOR /=
+3  OPERATOR #code
+3  OPERATOR copy
+2  NEWTYPE frame              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),122(45,40),5,9)
+     SIGNAL                   #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),1,20)
+     SIGNAL                   #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),1,39)
+     SIGNAL                   #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),2,37)
+     SIGNAL                   #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),119(45,25),2,59)
+3  FIELD info                 #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),122(45,40),6,2)
+3  FIELD seq                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),122(45,40),7,2)
+3  FIELD ack                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),122(45,40),8,2)
+3  OPERATOR =
+3  OPERATOR /=
+3  OPERATOR #code
+3  OPERATOR copy
+2  CHANNEL N1                 #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),155(32,87),1,1)
+2  CHANNEL D                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),131(96,87),1,1)
+     CONNECTION               #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),188(7,57),1,1)
+2  CHANNEL N2                 #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),146(160,87),1,1)
+     CONNECTION               #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),197(177,57),1,1)
+2  BLOCK DataLink1            #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85),1,1)
+2  BLOCK DataLink2            #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk,4,1,7)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85),1,1)
+     REFERENCE                #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),128(110,85),1,1)
+
+***********************************************************************
+**  BLOCK DataLink1
+**  <<SYSTEM go_back_n_sdl>>
+**  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\go_back_n_sdl.ssy(1),125(45,85),1,1)
+***********************************************************************
+
+***********************************************************************
+**  BLOCK DataLink2
+**  <<SYSTEM go_back_n_sdl>>
+**  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk,4,1,7)
+***********************************************************************
+3  SIGNALROUTE D2             #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),182(52,52),1,1)
+     CONNECTION               #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),182(52,52),1,1)
+3  SIGNALROUTE N21            #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),191(147,52),1,1)
+     CONNECTION               #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),191(147,52),1,1)
+3  PROCESS P2                 #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P2.spr,4,1,9)
+     SIGNALROUTE              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50),1,1)
+     SIGNALROUTE              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50),1,1)
+     SIGNALROUTE              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50),1,1)
+     SIGNALROUTE              #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50),1,1)
+     REFERENCE                #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\DataLink2.sbk(1),179(85,50),1,1)
+
+***********************************************************************
+**  PROCESS P2
+**  <<SYSTEM go_back_n_sdl/BLOCK DataLink2>>
+**  #SDTREF(SDL,C:\Telelogic\SDL_TTCN_Suite4.4\bin\SDL\P2.spr,4,1,9)
+***********************************************************************

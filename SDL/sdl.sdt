@@ -1,0 +1,58 @@
+SDT-SYSTEM-4.4
+[DRIVES]
+[SOURCE-TARGET-DIRECTORY]
+[LINKS]
+Endpoints=""
+File=untitled.sli
+[DIAGRAMS]
+0 1 go_back_n_sdl go_back_n_sdl.ssy 0 1545744215 go_back_n_sdl ""
+1 2 DataLink1 DataLink1.sbk 0 1545745228 DataLink1 ""
+2 5 P1 P1.spr 0 1545746436 P1 ""
+1 2 DataLink2 DataLink2.sbk 0 1545706768 DataLink2 ""
+2 5 P2 P2.spr 8 1545746623 P2 ""
+0 23 "Analysis Model" %unconnected% 0 0 0 ""
+0 23 "Used Files" %unconnected% 0 0 0 ""
+0 23 "SDL System Structure" %unconnected% 0 0 0 ""
+0 23 "TTCN Test Specification" %unconnected% 0 0 0 ""
+0 23 "Other Documents" %unconnected% 0 0 0 ""
+[VIEWOPTIONS]
+ShowDirectories=True
+ShowLongMenus=True
+[ANALYSEROPTIONS]
+ASN1KeywordFile=False
+ASN1Parameter=False
+CoderBufferInSDL=Octet-String
+Filter=False
+InstanceFile=False
+[H2SDLOPTIONS]
+AllWarnings=False
+Preprocessor=""
+PreprocessorOptions=""
+TranslateEnum=True
+UseFullPath=True
+UsePreprocessorOptions=False
+[STATEMATRIXOPTIONS]
+[INDEXOPTIONS]
+ShowSelectedTypes=True
+ShowSelectedUses=True
+ShowSelectedDiagrams=True
+FilterTypes=
+FilterUses=
+FilterDiagrams=
+NameFirst=True
+IndexAppearance=
+[PACKAGEGENERATOROPTIONS]
+DuplicateFile=
+[MAKEOPTIONS]
+CCompilerDriver=False
+[PRINTOPTIONS]
+DestinationFormat=PSFile
+FirstPageNo=1
+MarginLeft=100
+MarginLower=250
+MarginRight=100
+MarginUpper=420
+PrinterFile=""
+PrintFrom=0
+PrintTo=0
+PrintToFile=False
